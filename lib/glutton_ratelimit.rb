@@ -23,7 +23,7 @@ module GluttonRatelimit
     
     def times(num, &block)
       raise ArgumentError, "Code block expected"  if not block
-      raise ArgumentError, "Parameter expected to be Fixnum but found a #{num.class}."  unless num.class.equal?(Fixnum)
+      raise ArgumentError, "Parameter expected to be Integer but found a #{num.class}."  unless num.class.equal?(Integer)
       num.times do
         wait
         yield
